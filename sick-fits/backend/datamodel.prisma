@@ -1,4 +1,19 @@
+# every time we update our data model, we need to push it to prisma
+
 type User {
   id: ID! @unique
   name: String!
+  email: String!
+}
+
+type Item {
+  id: ID! @unique
+  title: String!
+  description: String!
+  image: String
+  largeImage: String
+  price: Int!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  # user: User!
 }

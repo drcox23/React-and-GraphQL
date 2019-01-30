@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import styled, {ThemeProvider, injectGlobal } from 'styled-components'
+import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 
-import Header from '../components/Header.js'
-import Meta from '../components/Meta.js'
+import Header from '../components/Header.js';
+import Meta from '../components/Meta.js';
 
 const theme = {
   red: '#FF0000',
@@ -14,7 +14,7 @@ const theme = {
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
 };
 
-// const MyButton = styled.button` 
+// const MyButton = styled.button`
 //   background: red;
 //   font-size: 100px;
 // `; //tag template literal
@@ -62,11 +62,11 @@ class Page extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-      <StyledPage>
-        <Meta />
-        <Header />
-        <Inner> {this.props.children} </Inner>
-      </StyledPage>
+        <StyledPage>
+          <Meta />
+          <Header />
+          <Inner> {this.props.children} </Inner>
+        </StyledPage>
       </ThemeProvider>
     );
   }
